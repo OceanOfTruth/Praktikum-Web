@@ -1,2 +1,2 @@
 # Praktikum-Web
-tugas web cv
+Pengumpulan Tugas CV,Cart,Checkout Berada pada folder Praktikum01
