@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Barang</title>
+
+    <style>
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightgrey;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+         }
+         li {
+            padding: 10px;
+            float:left;
+            padding-left: 55px;
+         }
+         a{
+            color: black;
+         }
+         label{
+            font-weight: bold;
+         }
+    </style>
+</head>
+<body>
+
+    
+    <param name="auto" value="">
+    <nav style="align-items: baseline;">
+        <table align="center" width="90%"  style="background-color: cornflowerblue; border: 2px solid; border-radius:20px;"> 
+            <tr> 
+                <td >
+                    <ul>
+                        <li><a href="">HOME</a> | </li> 
+                        <li><a href="">GENERATE LINK</a> | </li>
+                        <li><a href="">TRANSACTION HISTORY</a> | </li>
+                        <li><a href="">POLICY</a> | </li>
+                        <li><a href="">LOGOUT</a> |</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        
+    </nav>
+
+    <br>
+    <br>
+    <article>
+        <table style="border: 2px solid; border-radius:20px;" width="90%" align="center">
+            <tr> 
+                <td width="300" rowspan="2">
+                    <img style="border-radius: 20px; border: 3px solid;" src="/src/macbook_pro_m2_2022_silver_1_2.webp" width="300" alt="">
+                    <br>
+                    <a href="">
+                        <button style="background: linear-gradient(rgb(6, 151, 255), rgb(44, 101, 255)); border-radius: 20px; width: 150px; height: 30px; color: white;" >
+                            Upload Picture</button>
+                    </a>
+
+                    <div style="height: 200px;"></div>
+                    
+                </td>
+                
+                
+                <td width="50"></td>
+
+                <td>
+                    <form>
+
+                            <table>
+                                <tbody>
+                
+                                    <tr>
+                                        <td>
+                                            <label for="title">Title here:</label>
+                                        </td>
+
+                                        <td width="500">
+                                            <input  style="width: 290px;" placeholder="Macbook air $800"
+                                            type="text" row=>                       
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label placeholder="Year 2009" 
+                                            for="description">Description :</label>
+                                        </td>
+                                        <td>
+                                            <textarea cols="40" rows="10">
+                                                Year 2009
+                                                
+                                                Model :
+                                                
+                                                Condition : Mint
+                                            </textarea>                       
+                                        </td>
+                                    </tr>
+                                    <!-- ---------------------------------------------------------- -->
+                                    <tr>
+                                        <td>
+                                            <label for="Account">
+                                                Account Number :
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input style="width: 300px;"
+                                            placeholder="123-456-789-0" type="text">                       
+                                        </td>
+                                    </tr>
+                                    <!-- ---------------------------------------------------------- -->
+                                    <tr>
+                                        <td>
+                                            <label for="Email">Bank :</label>
+                                        </td>
+                                        <td>
+                                            
+                                            <select id="" name="bank" 
+                                            style="width: 200px;" >
+                                                <option value="hsbc">HSBC</option>
+                                            </select>                    
+                                        </td>
+                                    </tr>
+                                    <!-- ---------------------------------------------------------- -->
+                                    <tr>
+                                        <td>
+                                            <label for="holder">
+                                                Account holder :
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="Name Here"
+                                            style="width: 250px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="transction">Transaction :</label>
+                                        </td>
+                                        <td>
+                                            <input style="width: 25px;" placeholder="1" type="number"
+                                            id="quantity" min="1" max="99" >
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <!-- empty -->
+                                        </td>
+                                        <td>
+                                            <p>* if the transction is for 3 person choose 3 from the Drop-down list</p>
+                                            <!-- ---------------------------------------------------------- -->
+                                            <input type="checkbox" id="mobile" name="phone" value="send">
+                                            <label for="phone">
+                                                Send to mobile phone
+                                            </label>
+                                            <br>
+                                            <input type="checkbox" id="send" name="email" value="send">
+                                            <label for="vehicle2">
+                                                Send to email
+                                            </label><br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label   for="sendmo">
+                                                Send to mobile phone :
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input style="width: 300px;"" placeholder="089532372737" type="text">                       
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label   for="sendem">
+                                                Send to email :
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input style="width: 300px;"" placeholder="riantrickster@gmail.com" type="text">                       
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td  width="200">
+
+                                        </td>
+
+
+                                        <td>
+                                            <br>
+                                           <button style="width: 150px ; height: 30px; border-radius: 20px; background: rgb(100, 255, 100);">
+                                                <a href="/formpesandone.html">
+                                                    Generate nabr link
+                                                </a>
+                                           </button> 
+                                           <br>
+                                           <br>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </article>
+
+</body>
+</html>
