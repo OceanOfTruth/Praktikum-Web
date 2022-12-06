@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function jumlah() {
+            let bilangan_1 = document.getElementById("satu").value;
+            let bilangan_2 = document.getElementById("dua").value;
+            let hasil_var = parseInt(satu) + parseInt(dua);
+
+            let hasil = document.getElementById("hasil penjumlahan");
+            hasil.innerHTML = hasil_var;
+        }
+    </script>
+</head>
+<body style="text-align: center;">
+
+    <br>
+    <br>
+    <h1>Penjumlahan</h1>
+    <hr>
+    
+   <input type="number" id="satu">
+   <br>
+   <span style="font-size: 30px;">
+    +
+   </span>
+   <br>
+   <input type="number" id="dua">
+   <br>
+   <br>
+   <input type="submit" onclick="jumlah()">
+   <br>
+   <hr>
+   <span id="hasil penjumllahan" onchange="hasil()"></span>
+
+
+   
+</body>
+</html>
