@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image picker</title>
+    <style>
+        img{
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <select id="pilih" onchange="gambar()">
+            <option value="" hidden>-- Pilih --</option>
+            <option value="elang" id="elang">elang</option>
+            <option value="gorilla" id="gorilla">gorilla</option>
+            <option value="singa" id="singa">singa</option>
+
+
+        </select>
+        <br>
+        <img id="gambar">
+    </div>
+
+    <script>
+
+        let elang = document.getElementById("elang");
+        let gorilla = document.getElementById("gorilla");
+        let singa = document.getElementById("singa");
+        let pilih = document.getElementById("pilih");
+        let img = document.getElementById("gambar");
+
+        function gambar() {
+            if (pilih.value == elang.value){
+                img.setAttribute("src","/img/elang.jpg");
+                alert("Ini gambar elang");
+            }else if (pilih.value == gorilla.value){
+                img.setAttribute("src","/img/gorila.jpg");
+                alert("Ini gambar gorila");
+                
+            }else if (pilih.value == singa.value){
+                img.setAttribute("src","/img/singa.jpg");
+                alert("Ini gambar singa");
+            }
+        }
+    </script>
+</body>
+</html>

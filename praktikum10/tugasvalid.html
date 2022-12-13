@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/css/index.css">
+
+
+
+    
+</head>
+<body>
+    
+    <hr>
+    <br>
+    <div class="container">
+        <h1 style="color: white; font-weight: bolder;">FORM PEMBELIAN TIKET PESAWAT</h1>
+        <form action="#" style="background-color: rgb(83, 187, 239); padding: 100px; border-radius:30px;">
+            <div class="form-content">
+                <div class="flex">       
+                    <label style="float: left;" for="name" class="">Nama</label><p id="nama"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Nama" id="name">
+            </div>
+            <div class="form-content">
+                <div class="flex">
+                    <label style="float: left;" for="email" class="">Email</label><p id="emailf"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" id="email1">
+            </div>
+            <div class="form-content">
+                <div class="flex">
+                    <label for="jam" class="">Jam Keberangkatan</label><p id="date"></p>
+                </div>
+                <input type="time" class="form-control" placeholder="Jam Keberangkatan" id="jam">
+            </div>
+            <div class="form-content">
+                <div class="flex"> 
+                    <label for="tujuan" class="">Tujuan Keberangkatan</label><p id="dtn"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Tujuan Keberangkatan" id="tujuan">
+            </div>
+            <div class="form-content">
+                <div class="flex">
+                    <label for="tiket" class="">Jumlah Tiket</label><p id="ticket"></p>
+                </div>
+                <input type="number" class="form-control" placeholder="Jumlah Tiket" id="tiket">
+            </div>
+            <br>
+            <div class="form-content">
+                <input type="submit" value="Pesan Sekarang"  onclick="validasi()" class="btn">
+            </div>
+            <br>
+            <hr style="background: white;">
+
+            <div class=" text-white" >
+                <h3 style="font-weight: bold;">Data Terinput</h3>
+                <h6>
+                    nama : User <br>
+                    alamat email : user@gmail.com <br>
+                    jam keberangkatan : 10.30 <br>
+                    tujuan : osaka <br>
+                    jumlah tiket : 2 <br>
+                </h6>
+            </div>
+
+        </form>
+
+        
+    </div>
+
+    <script>
+
+
+        function validasi() {
+            let dat_nama = document.getElementById("name").value;
+            let l = document.getElementById("nama");
+
+            let dat_email = document.getElementById("email1").value;
+            let l1 = document.getElementById("emailf");
+
+            let dat_jam = document.getElementById("jam").value;
+            let l2 = document.getElementById("date");
+
+            let dat_tujuan = document.getElementById("tujuan").value;
+            let l3 = document.getElementById("dtn");
+
+            let dat_tiket = document.getElementById("tiket").value;
+            let l4 = document.getElementById("ticket");
+
+            if(dat_nama == "") {
+                l.innerHTML = `<p>` + "Nama tidak valid." + `</p>`;
+                dat_nama.focus();
+            }else if(dat_nama.length > 30) {
+                l.innerHTML = `<p>` + "Maksimum 30 karakter." + `</p>`;
+            }else{
+                l.innerHTML = `<p></p>`;
+            }
+
+            if(dat_email == "") {
+                l1.innerHTML = `<p>` + "Email wajib diisi." + `</p>`
+            }else if(dat_email.length <= 9 || dat_email == "@gmail.com"){
+                l1.innerHTML = `<p>` + "Email tidak valid." + `</p>`
+            }else{
+                l1.innerHTML = `<p></p>`;
+            }
+
+            if(dat_jam == "") {
+                l2.innerHTML = `<p>` + "Jam Keberangkatan wajib diisi." + `</p>`
+            }else{
+                l2.innerHTML = `<p></p>`
+            }
+            
+            if(dat_tujuan == "") {
+                l3.innerHTML = `<p>` + "Tujuan Keberangkatan wajib diisi." + `</p>`
+            }else{
+                l3.innerHTML = `<p></p>`
+            }
+
+            if(dat_tiket == "" || dat_tiket <= 0) {
+                l4.innerHTML = `<p>` + "Pembelian tiket minimal 1 tiket dan maximal 10 tiket." + `</p>`
+            }else if(dat_tiket > 10){
+                l4.innerHTML = `<p>` + "Maximum 10 tiket." + `</p>`
+            }else{
+                l4.innerHTML = `<p></p>`
+            }
+
+            
+        }
+
+        
+    </script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
